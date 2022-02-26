@@ -16,8 +16,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: build
-      run: docker build --target builder
+      run: docker build --target builder .
     - name: linter
-      run: docker clippy --target linter
+      run: docker clippy --target linter .
     - name: test
-      run: docker clippy --target tests
+      run: docker clippy --target tests .
