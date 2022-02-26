@@ -11,23 +11,13 @@ env:
 
 jobs:
 
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: clippy
-      run: cargo clippy --fix
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: tests
-      run: cargo test --verbose
-
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: build
-      run: cargo build --verbose --release
+      run: docker build --target builder .
+    - name: linter
+      run: docker build --target linter .
+    - name: test
+      run: docker build --target tests .

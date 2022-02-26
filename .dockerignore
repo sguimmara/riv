@@ -1,0 +1,11 @@
+target/
+.vscode/
+.idea/
+.github/
+.git/
+
+.gitignore
+Dockerfile
+LICENSE
+README.md
+Makefile
