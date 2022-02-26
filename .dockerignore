@@ -1,8 +1,9 @@
-target
+target/
+.vscode/
+.idea/
+.github/
+
 .gitignore
 Dockerfile
-.idea
-.vscode
 LICENSE
 README.md
-.github
