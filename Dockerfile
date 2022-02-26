@@ -37,7 +37,7 @@ COPY . .
 
 COPY --from=builder /build/target target
 
-RUN cargo clippy --fix --release
+RUN cargo clippy --release
 
 #### Tests ###################
 
