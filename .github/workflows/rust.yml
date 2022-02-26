@@ -18,6 +18,6 @@ jobs:
     - name: build
       run: docker build --target builder .
     - name: linter
-      run: docker clippy --target linter .
+      run: docker build --target linter .
     - name: test
-      run: docker clippy --target tests .
+      run: docker build --target tests .
